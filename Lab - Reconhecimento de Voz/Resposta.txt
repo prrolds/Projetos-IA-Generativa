@@ -1,0 +1,18 @@
+1. O que é Temperatura?
+A Temperatura controla o nível de aleatoriedade e criatividade da resposta. Ela altera a distribuição de probabilidade das palavras candidatas antes de o modelo fazer a escolha.
+
+Temperatura Baixa (ex: 0.1 a 0.4): O modelo se torna "conservador" e determinístico. Ele quase sempre escolherá a palavra com a maior probabilidade estatística. É ideal para tarefas que exigem precisão, como fatos históricos ou codificação.
+
+Temperatura Alta (ex: 0.8 a 1.2): O modelo se torna "aventureiro". Ele "achata" as probabilidades, dando mais chance para palavras que não seriam a primeira opção óbvia. Isso gera textos mais variados, criativos e menos repetitivos.
+
+Analogia: Pense na temperatura como o nível de confiança de um palestrante. Em temperatura baixa, ele só diz o que tem certeza absoluta. Em temperatura alta, ele começa a improvisar e usar metáforas inusitadas.
+
+
+2. O que é Top P (Nucleus Sampling)?
+O Top P, também chamado de Nucleus Sampling (Amostragem de Núcleo), é uma técnica que limita as opções de palavras baseando-se no acúmulo de probabilidade.
+
+Em vez de olhar para um número fixo de palavras, o modelo soma as probabilidades das palavras mais prováveis até atingir a porcentagem definida por P.
+
+Se Top P = 0.9: O modelo ignora todas as palavras que estão fora do "núcleo" de 90% das probabilidades acumuladas. Ele foca apenas no grupo principal que faz sentido gramatical e contextual.
+
+Se Top P = 0.1: O modelo é extremamente restrito, considerando apenas o topo da lista que compõe os primeiros 10% de probabilidade.
